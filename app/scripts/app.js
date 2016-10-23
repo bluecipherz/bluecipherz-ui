@@ -131,7 +131,7 @@ angular
   $rootScope.mbClick = function(callback){ callback(); }
   var state = false; 
   var restricted = false;
-  var restrictedStates = ['dashboard','profile_edit'];
+  var restrictedStates = ['dashboard.home','dashboard.pro_manager','dashboard.room_manager','profile_edit'];
   $rootScope.$on( '$stateChangeStart', function(e, toState  , toParams , fromState, fromParams) { 
     $('.footer').hide(); 
 
@@ -141,14 +141,14 @@ angular
       }
     } 
     var userData = $cookieStore.get('userData');   
-    var isLogin = toState.name === "home";
+    var isLogin = toState.name === "login";
     if(isLogin){
        return; // no need to redirect 
     }
     // now, redirect only not authenticated
     if(!angular.isDefined(userData) && restricted) {
         e.preventDefault(); // stop current execution
-        $state.go('home'); // go to login
+        $state.go('login'); // go to login
         restricted = false;
     }  
 

@@ -80,6 +80,6 @@ angular.module('alFjrApp')
 
   }).controller('LogoutCtrl', function ($timeout,$scope,$rootScope,$state,$cookieStore) { 
         $cookieStore.remove('userData');
-        $state.go('home');
+        $state.go('login');
         $rootScope.loggedIn = false;
   });

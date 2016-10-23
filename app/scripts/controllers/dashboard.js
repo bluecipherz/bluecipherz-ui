@@ -17,6 +17,12 @@ angular.module('alFjrApp')
         $state.go(state);
     }
 
+    vm.buttons = [
+        {name:'Dashboard',icon:'fa-dashboard',route:'dashboard.home'},
+        {name:'Project Manager',icon:'fa-list',route:'dashboard.pro_manager'},
+        {name:'Room Manager',icon:'fa-dashboard',route:'dashboard.room_manager'},
+    ]
+
 })
   .controller('DashboardHomeCtrl', function ($rootScope,$scope,$state,headerService,$cookieStore,TokenHandler,$interval,$timeout,$resource,loginService,$filter,projectFactory) {  
     var vm = this;  
