@@ -1,0 +1,47 @@
+.db_rm{
+  @include border-box();
+  *{
+    @include border-box();
+    float: left;
+  }
+  padding:10px;
+  // standerd widget class
+  .rm_widget{
+    width: 33.3333%;
+    padding: 5px;
+    height: 200px;
+    .rm_widget_cont{
+      @include border-radius(3px);
+      padding:30px;
+      width: 100%;
+      height: 100%;
+      background: #b78902;
+    }
+  }
+
+
+  // Current Balance
+  .rmw_currentBal{
+    .rm_widget_cont{
+      padding:30px;
+      .rmcb_head{
+        width: 100%;
+        color:rgba(255,255,255,0.7);
+        margin-bottom: 20px;
+      }
+      .rncb_amount{
+        width: 100%;
+        font-size: 320%;
+        color:rgba(255,255,255,1);
+      }
+    }
+  }
+
+  // widget width setting
+  .rm_widget.-w-1{ width: 16.6666%;}
+  .rm_widget.-w-2{ width: 33.3333%;}
+  .rm_widget.-w-3{ width: 50%;}
+  .rm_widget.-w-4{ width: 66.6666%;}
+  .rm_widget.-w-5{ width: 83.3333%;}
+  .rm_widget.-w-6{ width: 100%;}
+}

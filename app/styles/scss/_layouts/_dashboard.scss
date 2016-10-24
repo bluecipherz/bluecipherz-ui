@@ -15,7 +15,7 @@
 .db_pro,.dbpmpst_msg
 {
 	display:block;
-	float:left;	
+	float:left;
 }
 .dashboardHeader{
 	width:100%;
@@ -72,19 +72,19 @@ $boxMargin : 10;
 		@include border-radius(5px);
 		@include shadow(0,1px,7px,rgba(0,0,0,0.25));
 		position:relative;
-	} 
-	.db-size-1{ width:calc( 20% - #{$boxMargin * 2}px ); }	
-	.db-size-2{ width:calc( 40% - #{$boxMargin * 2}px ); }	
-	.db-size-3{ width:calc( 60% - #{$boxMargin * 2}px ); }	
-	.db-size-4{ width:calc( 80% - #{$boxMargin * 2}px ); }	
-	.db-size-5{ width:calc( 100% - #{$boxMargin * 2}px ); }	
+	}
+	.db-size-1{ width:calc( 20% - #{$boxMargin * 2}px ); }
+	.db-size-2{ width:calc( 40% - #{$boxMargin * 2}px ); }
+	.db-size-3{ width:calc( 60% - #{$boxMargin * 2}px ); }
+	.db-size-4{ width:calc( 80% - #{$boxMargin * 2}px ); }
+	.db-size-5{ width:calc( 100% - #{$boxMargin * 2}px ); }
 }
 .Dbpage{
 	width: 100%;
 	height: 100%;
 	position: relative;
 	.db_cont{
-		height: 100%; 
+		height: 100%;
 	}
 }
 .db-height-2{ height:#{ ( $boxHeight * 2 ) - ( $boxMargin * 2 ) }px; }
@@ -100,7 +100,7 @@ $boxMargin : 10;
 		padding:0 20px;
 		.dbws_circle{
 			$Cwidth:100;
-			width:#{$Cwidth}px; 
+			width:#{$Cwidth}px;
 			margin:30px calc( #{ $Cwidth  / 6 }% - #{ 50  }px );
 			position:relative;
 			img{
@@ -178,7 +178,7 @@ $boxMargin : 10;
 .db_reports{
 	$rWidth:500;
 	position:relative;
-	overflow:hidden; 
+	overflow:hidden;
 	.db_feed{
 		margin:2px 30px 10px 30px;
 		width:calc( 100% - 60px );
@@ -188,7 +188,7 @@ $boxMargin : 10;
 		@include transition2(height 0.4s,min-height 0.4s,max-height 0.4s,margin 0.4s);
 		.dbf_options{
 			opacity:0;
-			right:-5px; 
+			right:-5px;
 			border:none;
 			div{
 				display:block;
@@ -199,19 +199,19 @@ $boxMargin : 10;
 				line-height:12px;
 				color:#ddd;
 			}
-			div:hover{ 
-				color:#444; 
+			div:hover{
+				color:#444;
 			}
 		}
 		.dbf_options_active{
-			opacity:1; 
+			opacity:1;
 		}
 		.dbf_dp{
 			width:60px;
 			height:60px;
 			background:#ddd;
 			border-radius:50%;
-			@inlude border-radius(50%);
+			@include border-radius(50%);
 			margin:10px;
 		}
 		.dbf_right{
@@ -222,15 +222,15 @@ $boxMargin : 10;
 			width:100%;
 			margin-top:10px;
 			position:relative;
-			font-size:80%; 
-			.dbfh_name{ 
-				color:$themeBG; 
+			font-size:80%;
+			.dbfh_name{
+				color:$themeBG;
 				font-family:GOTHICB;
 			}
 			.dbfh_type{
-				font-size:90%; 
+				font-size:90%;
 				color:#aaa;
-				padding-left:3px; 
+				padding-left:3px;
 				span{
 					color:#666;
 					font-weight:bold;
@@ -238,7 +238,7 @@ $boxMargin : 10;
 			}
 		}
 		.dbf_head{
-			width:calc( 100% - 150px );	
+			width:calc( 100% - 150px );
 		}
 		.dbf_cont{
 			margin-bottom:5px;
@@ -290,7 +290,7 @@ $boxMargin : 10;
 			position:relative;
 			border-top:1px solid #eee;
 			$cmWidth:40;
-			$cmMargin:10; 
+			$cmMargin:10;
 			.dbfcm_left{
 				width:#{$cmWidth}px;
 				margin-right:#{$cmMargin}px;
@@ -320,9 +320,9 @@ $boxMargin : 10;
 			.dbf_options_cm{
 				opacity:1;
 			}
-		} 
-		.dbf_comment_deleted{ 
-			height:0!important; 
+		}
+		.dbf_comment_deleted{
+			height:0!important;
 			border:0!important;
 			position:relative;
 			overflow:hidden;
@@ -330,7 +330,7 @@ $boxMargin : 10;
 		}
 		.dbf_commentSet{
 			width:100%;
-			margin:3px 0 5px 0; 
+			margin:3px 0 5px 0;
 			font-size:80%;
 			.dbfc_input{
 				width:400px;
@@ -361,11 +361,11 @@ $boxMargin : 10;
 				border:none;
 				outline:none;
 				color:#fff;
-				position:relative; 
-			} 
+				position:relative;
+			}
 		}
 		.fbfc_cmBtn{
-			width:100%; 
+			width:100%;
 			font-size:70%;
 			margin:5px 0 10px 0;
 			span{
@@ -374,14 +374,14 @@ $boxMargin : 10;
 			}
 			span:hover{
 				opacity:1;
-				cursor:pointer; 
+				cursor:pointer;
 			}
 		}
 	}
 	.db_feed:nth-child(1){
 		margin-top:30px;
 	}
-	.db_feed:hover{	
+	.db_feed:hover{
 		.dbf_options{
 			opacity:1;
 		}
@@ -399,13 +399,13 @@ $boxMargin : 10;
 		overflow:hidden!important;
 	}
 
-	
+
 	.dbr_btn{
 		position:absolute;
 		top:0;
 		left:-50px;
 		width:50px;
-		height:50px; 
+		height:50px;
 		background:$themeBG;
 		div{
 			display:block;
@@ -418,7 +418,7 @@ $boxMargin : 10;
 			font-family:mixBD;
 		}
 	}
-	.dbr_btn:hover{ 
+	.dbr_btn:hover{
 		div{
 			color:$themeColorGD;
 		}
@@ -454,7 +454,7 @@ $boxMargin : 10;
 					color:#555;
 					line-height:150%;
 				}
-				.rpt_wh{ width:140px; text-align:center; }  
+				.rpt_wh{ width:140px; text-align:center; }
 			}
 			tr:hover{
 				cursor:pointer;
@@ -486,14 +486,14 @@ $boxMargin : 10;
 		padding-top:50px;
 		.dbrbs_btn{
 			width:50px;
-			height:50px; 
+			height:50px;
 			color:#fff;
 			font-family:mixBD;
 			line-height:50px;
 			text-align:center;
 		}
 		.dbrbs_btn:hover{
-			color:$themeColorGD; 
+			color:$themeColorGD;
 			cursor:pointer;
 		}
 		.dbrbs_btnDeact{
@@ -554,7 +554,7 @@ $boxMargin : 10;
 				padding:0 20px;
 				line-height:200%;
 				color:$themeColorG;
-				font-family:mixUL; 
+				font-family:mixUL;
 			}
 			.dbrrl_subhead{
 				width:calc(50% - 55px );
@@ -583,7 +583,7 @@ $boxMargin : 10;
 			.dbrr_time{
 				width:calc( 50% - 35px );
 				margin:5px 0 5px 20px;
-			} 
+			}
 			.dbrr_time:nth-last-child(1){
 				margin-left:5px;
 			}
@@ -601,7 +601,7 @@ $boxMargin : 10;
 				outline:0;
 				border:0;
 				background:rgba(0,0,0,0.4);
-			} 
+			}
 			button:focus,
 			button{
 				padding:0;
@@ -655,7 +655,7 @@ $boxMargin : 10;
 			font-family:mixBD;
 			line-height:140px;
 			overflow:hidden;
-			font-size:90%; 
+			font-size:90%;
 			@include transition(0.5s);
 			position:relative;
 			.rotator{
@@ -678,7 +678,7 @@ $boxMargin : 10;
 	}
 	.dbwp_right{
 		width:calc( 100% - 200px );
-		height:calc( 100% + 50px ); 
+		height:calc( 100% + 50px );
 		top:-50px;
 		position:absolute;
 		right:0px;
@@ -695,7 +695,7 @@ $boxMargin : 10;
 		}
 		.dbwpr_workList{
 			width:calc( 100% - 40px );
-			height:calc( 100% - 90px ); 
+			height:calc( 100% - 90px );
 			margin:20px;
 			@include transition(0.5s);
 			table{
@@ -706,7 +706,7 @@ $boxMargin : 10;
 					td,
 					th{
 						text-align:left;
-						padding:3px 8px; 
+						padding:3px 8px;
 					}
 					th{
 						font-family:mixBD;
@@ -715,7 +715,7 @@ $boxMargin : 10;
 					}
 				}
 				.tr:hover{
-					cursor:pointer; 
+					cursor:pointer;
 				}
 				.dbwprwl_rowAct:hover,
 				.dbwprwl_rowAct{
@@ -726,8 +726,8 @@ $boxMargin : 10;
 			}
 		}
 		.dbwprwl_deact{
-			opacity:0.2; 
-		} 
+			opacity:0.2;
+		}
 		.shm_inp{
 			width:100%;
 			height:100%;
@@ -770,15 +770,15 @@ $boxMargin : 10;
 				color:#fff;
 				.dbwprrl_top,
 				.dbwprrl_bottom{
-					width:calc( 100% - 20px ); 
+					width:calc( 100% - 20px );
 					padding-left:20px;
-				} 
-				.dbwprrl_top{ 
-					
+				}
+				.dbwprrl_top{
+
 					font-size:150%;
 
 				}
-				.dbwprrl_bottom{ 
+				.dbwprrl_bottom{
 					font-size:70%;
 					color:rgba(255,255,255,0.6);
 				}
@@ -825,7 +825,7 @@ $boxMargin : 10;
 			font-size:90%;
 		}
 		.dbpmmb_btn:hover{
-			cursor:pointer; 
+			cursor:pointer;
 		}
 		.dbpmmb_btn.y:hover{
 			background:$themeColorG;
@@ -874,10 +874,10 @@ $boxMargin : 10;
 				font-family:GOTHIC;
 				color:#fff;
 				margin:0 50% 0 50px ;
-				padding:0 10px; 
+				padding:0 10px;
 				line-height:28px;
 				font-size:90%;
-				border-radius:7px;  
+				border-radius:7px;
 			}
 			.dbpml_plist:hover{
 				background:rgba(255,255,255,0.12);
@@ -967,7 +967,7 @@ $boxMargin : 10;
 			z-index:100;
 		}
 	}
-	.dbpm_landing_inactive{ 
+	.dbpm_landing_inactive{
 		right:-110%;
 	}
 	.dbpm_proSettings{
@@ -988,7 +988,7 @@ $boxMargin : 10;
 		.dbpmlp_pop{
 			width:350px;
 			position:absolute;
-			min-height:50px; 
+			min-height:50px;
 			bottom:0;
 			left:20px;
 			padding:20px 0;
@@ -1000,7 +1000,7 @@ $boxMargin : 10;
 				color:#fff;
 				font-size:85%;
 				padding:5px;
-				@include border-radius(4px); 
+				@include border-radius(4px);
 			}
 		}
 		.dbpmlp_left{
@@ -1073,7 +1073,7 @@ $boxMargin : 10;
 				width:100%;
 				text-align:center;
 				color:$themeBG;
-				font-family:GOTHICB; 
+				font-family:GOTHICB;
 				margin:5px 0;
 			}
 			.dbpmlprl_round{
@@ -1100,15 +1100,15 @@ $boxMargin : 10;
 				@include transition(0.5s);
 				.dbpmlpl_disc{
 					white-space: pre-line;
-					font-size:95%; 
+					font-size:95%;
 					color:#999;
 					width:calc( 100 - 30px );
-					margin:20px; 
+					margin:20px;
 					max-height:250px;
 					overflow-y:scroll;
 					padding-right:10px;
 				}
-				table{ 
+				table{
 					margin:20px;
 					tr{
 						td{
@@ -1124,7 +1124,7 @@ $boxMargin : 10;
 						}
 					}
 				}
-			} 
+			}
 			.dbpmlpr_left.inactive,
 			.dbpmlpr_right.inactive{
 				margin-top:-100%;
@@ -1149,7 +1149,7 @@ $boxMargin : 10;
 					padding-left:10px;
 					padding-top:10px;
 					height:calc( 100% - 100px );
-					overflow-y:scroll; 
+					overflow-y:scroll;
 					border:2px solid #fff;
 					border:1px solid rgba(0,0,0,0.15);
 					@include border-radius(5px);
@@ -1159,15 +1159,15 @@ $boxMargin : 10;
 					margin:20px 20px 0 20px;
 					padding-left:10px;
 					color:#fff;
-					height:30px; 
+					height:30px;
 					font-size:204%;
-					font-family:mixUL; 
+					font-family:mixUL;
 					color:$themeBG;
 				}
 				.dbpmlprbl_item{
 					width:100%;
 					height:36px;
-					line-height:36px; 
+					line-height:36px;
 					border-bottom:1px solid rgba(0,0,0,0.1);
 					font-size:80%;
 					padding-right:5px;
@@ -1217,7 +1217,7 @@ $boxMargin : 10;
 							width:33.3332%;
 							padding:5px 10px;
 							font-family:GOTHICB;
-							color:$themeBG; 
+							color:$themeBG;
 							text-align:center;
 						}
 						.dbpmlprbrb_date{
@@ -1227,12 +1227,12 @@ $boxMargin : 10;
 							border:0;
 							background:#fff;
 							font-family:GOTHIC;
-							color:#555; 
+							color:#555;
 							text-align:center;
 							@include border-radius(4px);
 						}
 						.dbpmlprbrb_date:focus{
-							border:0;							
+							border:0;
 							outline:0;
 						}
 						.dbpmlprbrb_h{
@@ -1243,18 +1243,18 @@ $boxMargin : 10;
 						.dbpmlprbrb_c{
 							width:calc( 100% - 80px );
 							font-size:80%;
-							color:#fff; 
+							color:#fff;
 							margin-bottom:20px;
 						}
-						.dbpmlprbrb_b{ 
-						    .bg_checkbox{ 
+						.dbpmlprbrb_b{
+						    .bg_checkbox{
 						    	width:30px;
 						    	height:30px;
 						    	margin:0 10px 0 20px;
 						    	i{
 						    		color:#fff;
 						    		font-size:182%;
-						    		margin-top:-7px; 
+						    		margin-top:-7px;
 						    	}
 						    }
 						}
@@ -1289,7 +1289,7 @@ $boxMargin : 10;
 					font-family:GOTHICB;
 					@include border-radius(4px);
 					float:right;
-					margin:5px 27px 27px 0; 
+					margin:5px 27px 27px 0;
 					font-size:80%;
 				}
 				.dbpmlprb_save.delete{
@@ -1314,7 +1314,7 @@ $boxMargin : 10;
 					.dbpmlprbb_cont{
 						width:calc( 100% - 100px );
 						margin:0 50px;
-						color:#fff; 
+						color:#fff;
 						margin-top:calc( 50% - 140px );
 						text-align:left;
 					}
@@ -1336,10 +1336,10 @@ $boxMargin : 10;
 		}
 		.dbpmlp_right.active{
 			top:41px;
-		} 
-	} 
+		}
+	}
 	.dbpm_proSpace{
-		background:#fff; 
+		background:#fff;
 	}
 	.dbpm_proSettings,
 	.dbpm_proSpace{
@@ -1378,8 +1378,8 @@ $boxMargin : 10;
 				font-family:GOTHICB;
 				padding:0 20px;
 			}
-			.dbpmpt_path{ 
-				border-left:1px solid #eee; 
+			.dbpmpt_path{
+				border-left:1px solid #eee;
 				font-family:GOTHIC;
 				font-size:75%;
 				color:rgba(0,0,0,0.8);
@@ -1390,7 +1390,7 @@ $boxMargin : 10;
 				.dbpmptp_item:hover{
 					cursor:pointer;
 					text-decoration:underline;
-				} 
+				}
 			}
 		}
 		.dbpmp_navigator,
@@ -1400,13 +1400,13 @@ $boxMargin : 10;
 		}
 		.dbpmp_navigator{
 			width:300px;
-			border-right:1px solid $themeBG; 
+			border-right:1px solid $themeBG;
 			.dbpmpn_toolbar{
 				width:100%;
 				height:39px;
 				background:#eee;
 				background:$themeBG;
-				border-bottom:1px solid $themeBG; 
+				border-bottom:1px solid $themeBG;
 				.dbpmpnt_btn{
 					width:39px;
 					line-height:39px;
@@ -1421,7 +1421,7 @@ $boxMargin : 10;
 					float:right;
 				}
 				.dbpmpnt_btn.disable{
-					color:rgba(255,255,255,0.3);	
+					color:rgba(255,255,255,0.3);
 				}
 				.dbpmpnt_btn.disable:hover{
 					cursor:default;
@@ -1432,10 +1432,10 @@ $boxMargin : 10;
 				width:100%;
 				height:calc( 100% - 40px );
 				position:relative;
-				overflow:scroll; 
+				overflow:scroll;
 				padding-top:10px;
 				.dbpmpn_task,
-				.dbpmpn_taskbag{ 
+				.dbpmpn_taskbag{
 					width:calc( 100% - 8px );
 					height:29px;
 					border-bottom:1px solid #eee;
@@ -1454,7 +1454,7 @@ $boxMargin : 10;
 							color:#FF7B39;
 						}
 					}
-					.dbpmpnt_name{ 
+					.dbpmpnt_name{
 						color:#444;
 					}
 					.dbpmpntn_save{
@@ -1480,7 +1480,7 @@ $boxMargin : 10;
 				.dbpmpn_task.active,
 				.dbpmpn_taskbag.active{
 					background:#555;
-					.dbpmpnt_name, 
+					.dbpmpnt_name,
 					.dbpmpnt_icon{
 						color:#fff;
 					}
@@ -1497,7 +1497,7 @@ $boxMargin : 10;
 			padding:15px;
 			.dbpmps_tbag{
 				width:100%;
-				.dbpmpst_head{ 
+				.dbpmpst_head{
 					width:100%;
 					margin-top:200px;
 					text-align:center;
@@ -1517,7 +1517,7 @@ $boxMargin : 10;
 				.dbpmpst_head-active:focus{
 					border-top:1px solid $themeBG;
 					border-bottom:1px solid $themeBG;
-				} 
+				}
 				.dbpmpst_cont{
 					width:100%;
 					margin-top:30px;
@@ -1532,7 +1532,7 @@ $boxMargin : 10;
 				}
 			}
 			.dbpmps_task2,
-			.dbpmps_task{ 
+			.dbpmps_task{
 				width:100%;
 				// max-height:100%;
 				// overflow-y:scroll;
@@ -1569,7 +1569,7 @@ $boxMargin : 10;
 				.dbpmpsti_sd.sd_date{
 					margin-top: 5px;
 					margin-bottom: 0px;
-					background: #ebebeb;  
+					background: #ebebeb;
 				}
 				.dbpmpsti_br,
 				.dbpmpsti_cp,
@@ -1588,18 +1588,18 @@ $boxMargin : 10;
 				.dbpmpsti_sd:hover{
 					cursor: pointer;
 				}
-				.dbpmpst_name{  
+				.dbpmpst_name{
 				    width: 100%;
 				    font-size: 200%;
 				    margin:5px 0;
 				    color: #666;
 				    padding:0 5px;
-				    border: 0; 
+				    border: 0;
 				}
 				.dbpmpst_name:focus{
 					border:0;
 					outline:0;
-				} 
+				}
 				.dbpmpst_desc{
 					width:calc( 100% - 40px );
 					padding:10px 20px;
@@ -1611,7 +1611,7 @@ $boxMargin : 10;
 					resize:none;
 					max-height:300px;
 					min-height:50px;
-				}				
+				}
 				.dbpmpst_desc:focus{
 					border:0;
 					outline:0;
@@ -1625,26 +1625,26 @@ $boxMargin : 10;
 					margin:0 20px;
 					font-family:GOTHICB;
 					font-size:85%;
-					color:#ccc;	
-				}			   
-				.dbpmpst_date{ 
+					color:#ccc;
+				}
+				.dbpmpst_date{
 					width:calc( 50% - 35px );
 					margin:20px 0 20px 20px;
 					height:40px;
 					line-height:40px;
 					padding-left:20px;
-				}			   
+				}
 				.dbpmpst_heading{
 					margin:20px;
 					font-family:GOTHICB;
 					font-size:110%;
 					color:$themeBG;
 					@include unselectable();
-				}			   
+				}
 				.dbpmpst_hdate{
 					width:calc( 50% - 55px );
 					margin:20px 20px 0 20px;
-				}			   
+				}
 			}
 			.dbpmps_task2{
 				width:40%;
@@ -1688,7 +1688,7 @@ $boxMargin : 10;
 						line-height:40px;
 						z-index:0;
 					}
-					.dbpmpsts_optionPane{ 
+					.dbpmpsts_optionPane{
 						width:calc( 100% - 10px );
 						min-height:30px;
 						max-height:180px;
@@ -1718,14 +1718,14 @@ $boxMargin : 10;
 					}
 
 				}
-				.dbpmpst_select.disable{ 
+				.dbpmpst_select.disable{
 					.dbpmpsts_darrow{
 						display:none;
-					} 
+					}
 					.dbpmpsts_dis:hover{
 						cursor:default;
 					}
-				}  
+				}
 				.dbpmpst_prio{
 					width:calc( 100% - 160px );
 					margin:3px 0 23px 0;
@@ -1746,16 +1746,16 @@ $boxMargin : 10;
 			.dbpmpst_create{
 				width:100px;
 				height:40px;
-				position:absolute; 
+				position:absolute;
 				background:$themeColorG;
 				color:#fff;
 				line-height:40px;
 				text-align:center;
 				font-size:92%;
-				font-family:GOTHICB; 
+				font-family:GOTHICB;
 				bottom:40px;
 				right:50px;
-				z-index:10; 
+				z-index:10;
 			}
 			.dbpmpst_create.cancel{
 				right:160px;
@@ -1765,19 +1765,19 @@ $boxMargin : 10;
 				margin:30px 0 0 calc( 50% - 70px );
 			}
 			.dbpmpst_create:hover{
-				cursor:pointer; 
+				cursor:pointer;
 			}
 			.dbpmpst_create.cancel:hover{
 				background:$themeColorR;
 			}
 			.dbpmpst_msg{
 				padding:10px;
-				font-size:95%; 
+				font-size:95%;
 				line-height:120%;
 				color:#555;
 			}
-		} 
-	} 
+		}
+	}
 	.dbpm_proSettings.inactive{
 		top:100%;
 	}
@@ -1787,7 +1787,7 @@ $boxMargin : 10;
 	.dbpm_proSpace{
 		top:-100%;
 		}
-	} 
+	}
 
 
 .dbf_date{
@@ -1797,19 +1797,19 @@ $boxMargin : 10;
 	font-size:75%;
 	color:#999;
 }
-.dbf_options{  
+.dbf_options{
 	height:20px;
 	min-width:20px;
 	position:absolute;
 	top:5px;
 	right:0px;
-	border:1px solid #ddd; 
-	@include transition(0.1s); 
+	border:1px solid #ddd;
+	@include transition(0.1s);
 }
 .dbf_options:hover{
-	cursor:pointer;  
+	cursor:pointer;
 }
-.dbr_popUp{ 
+.dbr_popUp{
 	width:calc( 100% - 50px );
 	padding:0 40px;
 	padding-top:calc( 35% - 50px );
@@ -1817,21 +1817,21 @@ $boxMargin : 10;
 	position:absolute;
 	top:0;
 	left:0;
-	z-index:0; 
+	z-index:0;
 	opacity:0;
-	background:rgba(255,255,255,0.8); 
+	background:rgba(255,255,255,0.8);
 	text-align:center;
 	font-size:90%;
 	color:#666;
 	@include transition(0.5s);
 	.dbrps_btn{
-		position:absolute; 
+		position:absolute;
 		width:70px;
 		line-height:30px;
 		height:30px;
 		text-align:center;
 		background:#ddd;
-		@inlude border-radius(5px);
+		@include border-radius(5px);
 		left:calc( 50% - 75px );
 		color:#fff;
 		margin-top:20px;
@@ -1875,15 +1875,15 @@ $boxMargin : 10;
   	border-left:4px solid $themeBG;
     -webkit-animation: rotate 0.3s linear infinite; /* Chrome, Safari, Opera */
     animation: rotate 0.3s linear infinite;
-} 
+}
 .db_refresh-right.db_refreshing:hover,
 .db_refresh-right.db_refreshing{
   	border-left:4px solid $themeColorGD;
 }
 @keyframes rotate {
-    0%{ @include transform(rotate(0deg)); } 
-    100%{ @include transform(rotate(360deg)); } 
-} 
+    0%{ @include transform(rotate(0deg)); }
+    100%{ @include transform(rotate(360deg)); }
+}
 .db_head{
 	font-family:mixUL;
 	width:100%;
@@ -1938,7 +1938,7 @@ div::-webkit-resizer {
 
 .bg_checkbox{
 	width:35px;
-	height:35px; 
+	height:35px;
 	margin:16px 0 0 7px;
 	@include border-radius(10px);
 	border:5px solid #ddd;
@@ -1997,12 +1997,12 @@ div::-webkit-resizer {
 		}
 	}
 	.dbn_item:hover{
-		cursor: pointer;  
+		cursor: pointer;
 		background: rgba(255,255,255,0.05);
-		.dbni_img{ 
+		.dbni_img{
 		}
-		.dbni_name{ 
-			color: #fff; 
+		.dbni_name{
+			color: #fff;
 		}
 	}
 	.dbn_item.active:hover,
@@ -2010,10 +2010,10 @@ div::-webkit-resizer {
 		cursor: default;
 		background: rgba(0,0,0,0.1);
 		.dbni_img,
-		.dbni_name{ 
-			color: $themeColorG;  
+		.dbni_name{
+			color: $themeColorG;
 		}
-		.dbni_name{ 
+		.dbni_name{
 			font-family: GOTHICB;
 		}
 	}
@@ -2022,8 +2022,8 @@ div::-webkit-resizer {
 	left: 0;
 }
 
-.db_view{ 
-	position:fixed; 
+.db_view{
+	position:fixed;
 	top:50px;
 	left: 50px!important;
 	right: 0;
@@ -2037,12 +2037,12 @@ div::-webkit-resizer {
 // custom slider classes
 
 rzslider .rz-pointer {
-    top: -4px; 
+    top: -4px;
     width: 11px;
     height: 11px;
-    -webkit-border-radius: 0px; 
+    -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    border-radius: 0px; 
+    border-radius: 0px;
 }
 rzslider .rz-bubble {
     bottom: 9px;
@@ -2056,6 +2056,6 @@ rzslider .rz-limit {
 	display: none;
 	opacity: 0;
 }
-rzslider { 
-    margin: 25px 0 15px 0; 
+rzslider {
+    margin: 25px 0 15px 0;
 }
