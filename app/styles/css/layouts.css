@@ -3573,17 +3573,87 @@ rzslider {
       padding: 30px;
       width: 100%;
       height: 100%;
-      background: #b78902; }
+      background: #25B76B; }
   .db_rm .rmw_currentBal .rm_widget_cont {
-    padding: 30px; }
+    padding: 10px; }
+    .db_rm .rmw_currentBal .rm_widget_cont .rmcb_refresh {
+      width: 12px;
+      height: 12px;
+      -moz-border-radius: 100px;
+      -webkit-border-radius: 100px;
+      -ms-border-radius: 100px;
+      border-radius: 100px;
+      background: #17dcff;
+      color: rgba(255, 255, 255, 0.7);
+      border: 3px solid #fcfffa;
+      margin: 10px 8px 25px 0px;
+      float: right; }
+    .db_rm .rmw_currentBal .rm_widget_cont .rmcb_refresh:hover {
+      cursor: pointer; }
     .db_rm .rmw_currentBal .rm_widget_cont .rmcb_head {
       width: 100%;
       color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      margin-left: 15%; }
     .db_rm .rmw_currentBal .rm_widget_cont .rncb_amount {
       width: 100%;
       font-size: 320%;
-      color: white; }
+      color: white;
+      margin-left: 15%; }
+  .db_rm .rmw_logs {
+    width: 33.3333%;
+    padding: 5px;
+    height: 200px; }
+    .db_rm .rmw_logs .rmw_log_cont {
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px;
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      background: #0db7a4; }
+      .db_rm .rmw_logs .rmw_log_cont .rmwl_refresh {
+        width: 12px;
+        height: 12px;
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -ms-border-radius: 100px;
+        border-radius: 100px;
+        background: #17dcff;
+        color: rgba(255, 255, 255, 0.7);
+        border: 3px solid #fcfffa;
+        margin: 10px 8px 25px 0px;
+        float: right; }
+      .db_rm .rmw_logs .rmw_log_cont .rmwl_refresh:hover {
+        cursor: pointer; }
+  .db_rm .rmw_graph {
+    width: 33.3333%;
+    padding: 5px;
+    height: 200px; }
+    .db_rm .rmw_graph .rmw_graph_cont {
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px;
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      background: #F37372; }
+      .db_rm .rmw_graph .rmw_graph_cont .rmwg_refresh {
+        width: 12px;
+        height: 12px;
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -ms-border-radius: 100px;
+        border-radius: 100px;
+        background: #17dcff;
+        color: rgba(255, 255, 255, 0.7);
+        border: 3px solid #fcfffa;
+        margin: 10px 8px 25px 0px;
+        float: right; }
+      .db_rm .rmw_graph .rmw_graph_cont .rmwg_refresh:hover {
+        cursor: pointer; }
   .db_rm .rm_widget.-w-1 {
     width: 16.6666%; }
   .db_rm .rm_widget.-w-2 {
