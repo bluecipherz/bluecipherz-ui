@@ -8,10 +8,10 @@
  *
  * Main module of the application.
  */
-angular  
+angular
   .module('alFjrApp', [
     'ngResource',
-    'ui.router', 
+    'ui.router',
     'ngCookies',
     'satellizer',
     'ngAnimate',
@@ -19,17 +19,17 @@ angular
     'ngSanitize',
     'angular-svg-round-progressbar',
     // 'datePicker'
-  ]) 
-  .config(function ($locationProvider,$stateProvider,$urlRouterProvider, $authProvider) { 
-      
+  ])
+  .config(function ($locationProvider,$stateProvider,$urlRouterProvider, $authProvider) {
+
       // Satellizer configuration that specifies which API
       // route the JWT should be retrieved from
       // $authProvider.loginUrl = 'http://api.blue.bluroe.com/api/authenticate';
       $authProvider.baseUrl = 'http://localhost:9000';
       $authProvider.loginUrl = 'http://api.blue.bluroe.com/api/authenticate';
-      
-      $urlRouterProvider.otherwise('/'); 
- 
+
+      $urlRouterProvider.otherwise('/login');
+
       $stateProvider
         // .state('home', {
         //   url: '/',
@@ -86,7 +86,7 @@ angular
           controllerAs: 'login'
         })
         .state('logout', {
-          url: '/logout', 
+          url: '/logout',
           controller: 'LogoutCtrl',
           controllerAs: 'login'
         })
@@ -99,7 +99,7 @@ angular
           templateUrl: 'views/dashboard.html',
           controller: 'DashboardCtrl',
           controllerAs: 'dash'
-        }) 
+        })
         .state('dashboard.home', {
           url: '',
           templateUrl: 'views/dashboard/home.html',
@@ -111,7 +111,7 @@ angular
           templateUrl: 'views/dashboard/projectManager.html',
           controller: 'ProjectManagerCtrl',
           controllerAs: 'pm'
-        }) 
+        })
         .state('dashboard.room_manager', {
           url: '/room_manager',
           templateUrl: 'views/dashboard/room_manager.html',
@@ -124,35 +124,35 @@ angular
         //   controller: 'testCtrl',
         //   controllerAs: 'main'
         // })
-        
+
   })
 .run(function($rootScope, $location, $state, $stateParams, $cookieStore) {
   $rootScope.title = 'BCZ - IT Solutions';
   $rootScope.mbClick = function(callback){ callback(); }
-  var state = false; 
+  var state = false;
   var restricted = false;
-  var restrictedStates = ['dashboard.home','dashboard.pro_manager','dashboard.room_manager','profile_edit'];
-  $rootScope.$on( '$stateChangeStart', function(e, toState  , toParams , fromState, fromParams) { 
-    $('.footer').hide(); 
+  var restrictedStates = ['dashboard.home','dashboard.pro_manager','dashboard.room_manager','profile_edit','home'];
+  $rootScope.$on( '$stateChangeStart', function(e, toState  , toParams , fromState, fromParams) {
+    $('.footer').hide();
 
     for(var i=0;i < restrictedStates.length;i++){
       if(toState.name == restrictedStates[i]){
         restricted = true;
       }
-    } 
-    var userData = $cookieStore.get('userData');   
+    }
+    var userData = $cookieStore.get('userData');
     var isLogin = toState.name === "login";
     if(isLogin){
-       return; // no need to redirect 
+       return; // no need to redirect
     }
     // now, redirect only not authenticated
     if(!angular.isDefined(userData) && restricted) {
         e.preventDefault(); // stop current execution
         $state.go('login'); // go to login
         restricted = false;
-    }  
+    }
 
-  });   
+  });
 
 
   if(angular.isDefined($cookieStore.get('userData'))){
@@ -164,7 +164,6 @@ angular
 
 
 
-$(function() {   
-    // jQuery.scrollSpeed(80, 800); 
+$(function() {
+    // jQuery.scrollSpeed(80, 800);
 });
-  
