@@ -8,8 +8,8 @@
  * Controller of the alFjrApp
  */
 
-angular.module('alFjrApp')
-  .controller('ProfileCtrl', function ($rootScope,$state,headerService,$cookieStore,TokenHandler,loginService,$resource) {  
+angular.module('BlueUI')
+  .controller('ProfileCtrl', function ($rootScope,$state,headerService,$cookieStore,TokenHandler,loginService,$resource) {
     var vm = this;
     headerService.setPage();
     headerService.setAsNormalPage();
@@ -18,7 +18,7 @@ angular.module('alFjrApp')
 
 
     var op = $cookieStore.get('password');
-  	
+
 
 
   	vm.checkField = function(id){
@@ -59,25 +59,25 @@ angular.module('alFjrApp')
   	vm.saveF1 = function(){
 		if(!vm.form1Active){
 			saveBasicInfo();
-		}  		
+		}
   	}
 
-  	function saveBasicInfo(){ 
+  	function saveBasicInfo(){
   	 	vm.form1Saving = true;
         var data = TokenHandler.wrapActions(
             $resource(loginService.host + '/profile_update'),
             { 'save':   {method:'POST'}, isArray:false}
-        );  
-        data.save(vm.user).$promise.then(function(results) { 
+        );
+        data.save(vm.user).$promise.then(function(results) {
   	 		vm.form1Saving = false;
         	vm.user = results;
         	$cookieStore.put('email',results.email);
         	vm.userDataT = results;
         	$rootScope.userData = results;
-        	$cookieStore.put('userData',results); 
+        	$cookieStore.put('userData',results);
   			vm.checkField(1);
-        }); 
-    } 
+        });
+    }
 
     vm.saveF2 = function(){
     	if(!vm.form2Active){
@@ -90,14 +90,14 @@ angular.module('alFjrApp')
         var data = TokenHandler.wrapActions(
             $resource(loginService.host + '/profile_change_pass'),
             { 'save':   {method:'POST'}, isArray:false}
-        );  
-        data.save({id:vm.user.id,password:vm.newPass}).$promise.then(function(results) { 
-  	 		vm.form2Saving = false; 
-        	$cookieStore.put('password',results.password); 
+        );
+        data.save({id:vm.user.id,password:vm.newPass}).$promise.then(function(results) {
+  	 		vm.form2Saving = false;
+        	$cookieStore.put('password',results.password);
   			vm.oldPass = '';
   			vm.newPass = '';
   			vm.confPass = '';
   			vm.checkField(2);
-        }); 	
+        });
     }
   })

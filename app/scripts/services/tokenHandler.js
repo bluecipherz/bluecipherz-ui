@@ -7,7 +7,7 @@
  * # TokenHandler
  * Factory in the bluroeApp.
  */
-angular.module('alFjrApp')
+angular.module('BlueUI')
   .factory('TokenHandler', function ($http, loginService, $rootScope,$cookieStore) {
     // Service logic
     // ...
@@ -19,36 +19,36 @@ angular.module('alFjrApp')
     // var projects; // temp implementation
     var tempLoggedin = false;
 
-    var observerCallbacks = []; 
+    var observerCallbacks = [];
 
-    if(angular.isDefined($cookieStore.get('userData'))){ 
+    if(angular.isDefined($cookieStore.get('userData'))){
     // temp login
     var e = $cookieStore.get('email');
     var p = $cookieStore.get('password');
-    
+
     $http.post(loginService.host + '/authenticate', {email:e,password:p})
       .then(function(response, status, header, config) {
           set(response.data.token);
           user = response.data.user;
           $rootScope.authUser = response.data.user;
-          // projects = response.data.projects; 
+          // projects = response.data.projects;
           tempLoggedin = true;
           notifyObservers();
       }, function(data, status, header, config) {
           console.log('login error')
       });
-    
+
     // end temp login
     }
 
 	//login
-	var login = function(username,password,callback){ 
+	var login = function(username,password,callback){
 		$http.post(loginService.host + '/authenticate', {email:username,password:password})
 	      .then(function(response, status, header, config) {
 	          set(response.data.token);
 	          user = response.data.user;
 	          $rootScope.authUser = response.data.user;
-	          // projects = response.data.projects; 
+	          // projects = response.data.projects;
 	          $cookieStore.put('token',token)
 	          tempLoggedin = true;
 	          notifyObservers();
@@ -109,7 +109,7 @@ angular.module('alFjrApp')
       onTempLogin: function(callback) {
         observerCallbacks.push(callback);
       },
-      login: function(u,p,c) { 
+      login: function(u,p,c) {
         return login(u,p,c);
       },
       isTempLogged: function() {

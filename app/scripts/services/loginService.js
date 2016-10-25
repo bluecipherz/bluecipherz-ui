@@ -7,7 +7,7 @@
  * # powerprogress
  * Service in the bluroeApp.
  */
-angular.module('alFjrApp')
+angular.module('BlueUI')
     .service('loginService', function () {
         this.host = 'http://localhost:8000/api';
         // this.host = 'http://api.bluecipherz.com/api';

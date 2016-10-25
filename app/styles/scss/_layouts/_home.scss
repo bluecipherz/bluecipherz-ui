@@ -28,7 +28,7 @@
 	//background:#263646;
 	//background:$themeBG;
 	height:550px;
-	position:relative; 
+	position:relative;
 	.ht_nameHead{
 		width:100%;
 		text-align:center;
@@ -40,7 +40,7 @@
 		font-family:mixBD;
 	}
 	.ht_gr,
-	.ht_img{ 
+	.ht_img{
 		width:100%;
 		height:100%;
 		position:absolute;
@@ -52,7 +52,7 @@
 			min-width:100%;
 			min-height:100%;
 			max-height:100%;
-			width:auto; 
+			width:auto;
 		}
 	}
 
@@ -71,9 +71,9 @@
 		img{
 			max-width:100%;
 			min-width:100%;
-			height:auto; 
+			height:auto;
 		}
-	} 
+	}
 	.htl_big{
 		left:-200px;
 		width:400px;
@@ -130,7 +130,7 @@
 		}
 		.sca3{
 			animation-delay: .4s;
-		} 
+		}
 		.sca2{
 			bottom:30px;
 			border-right:#{$lineWidth}px  solid rgba($tcr,$tcg,$tcb,0.3);
@@ -170,9 +170,9 @@
 			border-right:#{$lineWidth}px solid rgba(255,255,255,1);
 			border-bottom:#{$lineWidth}px solid rgba(255,255,255,1);
 	    }
-	} 
+	}
 }
-.notHome{ 
+.notHome{
 	.ht_logo{
 		width:130px;
 		height:100px;
@@ -182,7 +182,7 @@
 		img{
 			max-width:100%;
 			min-width:100%;
-			height:auto;  
+			height:auto;
 		}
 	}
 
@@ -219,7 +219,7 @@
 }
 .homePage{
 	width:100%;
-	margin-top:0px; 
+	margin-top:0px;
 	overflow:hidden;
 	position:relative;
 	z-index:10;
@@ -228,11 +228,11 @@
 	.homeMid2{
 		width:100%;
 		background:#fff;
-		min-height:400px; 
+		min-height:400px;
 		@include transition(1s);
 	}
-	.homeMid2{ 
-		background:#f7f9fa; 
+	.homeMid2{
+		background:#f7f9fa;
 		background:#f2f4f5;
 		@media (min-width: 1061px) {
 		    .boxx { width: 840px; }
@@ -243,7 +243,7 @@
 		@media (min-width: 1370px) { // [ Extra high resolution ]
 		    .boxx { width: 840px;}
 		}
-		.hm2_head{ 
+		.hm2_head{
 			width:100%;
 			font-size:200%;
 			color:$themeBG;
@@ -252,7 +252,7 @@
 		}
 		.hm2_sector{
 			width:100%;
-			min-height:100px; 
+			min-height:100px;
 			padding:80px 0 40px 0;
 			/*border-bottom:1px solid #e64e4d;*/
 			.hm2s_img{
@@ -276,7 +276,7 @@
 				.hm2si_anim{
 					width:22px;
 					height:40px;
-					position:absolute; 
+					position:absolute;
 				}
 
 				/* section 1 */
@@ -285,7 +285,7 @@
 					left:42px;
 					width:50px;
 					height:50px;
-				    -webkit-animation: hm2a1_1 5s infinite linear; /* Chrome, Safari, Opera */ 
+				    -webkit-animation: hm2a1_1 5s infinite linear; /* Chrome, Safari, Opera */
 				    animation: hm2a1_1 5s infinite linear;
 				}
 				@keyframes hm2a1_1 {
@@ -298,13 +298,13 @@
 					left:87px;
 					width:30px;
 					height:30px;
-				    -webkit-animation: hm2a1_2 2s infinite linear; /* Chrome, Safari, Opera */ 
+				    -webkit-animation: hm2a1_2 2s infinite linear; /* Chrome, Safari, Opera */
 				    animation: hm2a1_2 2s infinite linear;
 				}
 				@keyframes hm2a1_2 {
 				    0% { @include transform(rotate(0deg)); }
 				    100%{ @include transform(rotate(-360deg)); }
-				} 
+				}
 
 
 
@@ -318,23 +318,23 @@
 					left:42px;
 					width:100px;
 					height:100px;
-				    -webkit-animation: hm2a2_1 5s infinite linear; /* Chrome, Safari, Opera */ 
+				    -webkit-animation: hm2a2_1 5s infinite linear; /* Chrome, Safari, Opera */
 				    animation: hm2a2_1 5s infinite linear;
 				    z-index:20;
 				}
 				@keyframes hm2a2_1 {
 				    0% { @include transform(rotate(0deg)); }
 				    100%{ @include transform(rotate(360deg)); }
-				}  
+				}
 
 
-				/* section 3 */ 
-				.hm2sia3_1{ 
+				/* section 3 */
+				.hm2sia3_1{
 					top:90px;
 					left:30px;
 					width:30px;
 					height:30px;
-				    -webkit-animation: hm2sia3_1 0.6s infinite linear; /* Chrome, Safari, Opera */ 
+				    -webkit-animation: hm2sia3_1 0.6s infinite linear; /* Chrome, Safari, Opera */
 				    animation: hm2sia3_1 0.6s infinite linear;
 				}
 				@keyframes hm2sia3_1 {
@@ -345,27 +345,27 @@
 						height:30px;
 						opacity:1;
 				    }
-				    60%{ 
+				    60%{
 				    	opacity:1;
 				    }
-				    100%{ 
+				    100%{
 						top:115px;
 						left:-15px;
 						width:50px;
 						height:50px;
 						opacity:0;
 				    }
-				}  
+				}
 
-				/* section 4 */ 
-				.hm2sia4{ 
-				    -webkit-animation: hm2sia4 3s infinite linear; /* Chrome, Safari, Opera */ 
+				/* section 4 */
+				.hm2sia4{
+				    -webkit-animation: hm2sia4 3s infinite linear; /* Chrome, Safari, Opera */
 				    animation: hm2sia4 3s infinite linear;
 				}
 				@keyframes hm2sia4 {
 				    0% { @include transform(rotate(0deg)); }
 				    100%{ @include transform(rotate(-360deg)); }
-				}  
+				}
 
 			}
 			.hm2s_cont{
@@ -384,7 +384,7 @@
 					color:#888;
 				}
 			}
-		} 
+		}
 		.hm2_sectorTop{
 			padding-top:20px;
 		}
@@ -398,7 +398,7 @@
 				.hm2si_base{
 					margin:0 0 50px 50px;
 				}
-			} 
+			}
 			*{
 				text-align:right;
 			}
@@ -408,7 +408,7 @@
 
 
 .homeGraph{
-	//confiq 
+	//confiq
 
 	$cirlceWidth:140;
 	$cirlcePadding:50;
@@ -496,7 +496,7 @@
 				max-width:100%;
 				min-width:100%;
 				max-height:100%;
-				min-height:100%; 
+				min-height:100%;
 			}
 		}
 		.hmhgc_cont{
@@ -520,4 +520,17 @@
 		opacity:1;
 		@include transition-delay(0.3s);
 	}
+}
+
+
+
+
+.rightPanel{
+  position: fixed;
+  top:50px;
+  right:0;
+  width:300px;
+  bottom:0;
+  background: #fff;
+  z-index: 100;
 }

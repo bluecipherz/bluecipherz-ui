@@ -7,7 +7,7 @@
  * # powerprogress
  * Service in the bluroeApp.
  */
-angular.module('alFjrApp')
+angular.module('BlueUI')
   .service('roomManagerService', function (TokenHandler, $resource, loginService) {
     var vm = this;
     vm.wallet = false;

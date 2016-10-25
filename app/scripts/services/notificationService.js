@@ -7,27 +7,29 @@
  * # powerprogress
  * Service in the bluroeApp.
  */
-angular.module('alFjrApp')
-  .service('notificationService', function (TokenHandler, $resource, loginService) {
+angular.module('BlueUI')
+  .service('notificationService', function (TokenHandler, $resource, loginService, $cookieStore ) {
     var vm = this;
-    // vm.wallet = false;
-    //
-    //
-    // var walletQuery = TokenHandler.wrapActions(
-    //   $resource(loginService.host + '/room_manager'),
-    //   ['get']
-    // );
-    //
-    // vm.getRoomWallet = function (callback) {
-    //   if(vm.wallet){
-    //     callback(vm.wallet);
-    //   }else{
-    //     walletQuery.get({}).$promise.then(function(results) {
-    //       vm.wallet = results;
-    //       callback(vm.wallet);
-    //     });
-    //   }
-    // };
+    vm.notification = false;
+    vm.user = $cookieStore.get('userData');
+    console.log(vm.user.id);
+
+
+    var notificationQuery = TokenHandler.wrapActions(
+      $resource(loginService.host + '/notification/'+vm.user.id),
+      ['query']
+    );
+
+    vm.getNotification = function (callback) {
+      if(vm.notification){
+        callback(vm.notification);
+      }else{
+        notificationQuery.query({}).$promise.then(function(results) {
+          vm.notification = results;
+          callback(vm.notification);
+        });
+      }
+    };
 
     vm.categories = {
       ROOM_WALLET:'ROOM_WALLET',

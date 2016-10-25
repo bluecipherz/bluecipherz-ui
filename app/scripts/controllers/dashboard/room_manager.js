@@ -8,7 +8,7 @@
  * Controller of the alFjrApp
  */
 
-angular.module('alFjrApp')
+angular.module('BlueUI')
   .controller('RoomManagerCtrl', function ($rootScope,$state,headerService,roomManagerService) {
     var vm = this;
     headerService.setPage();

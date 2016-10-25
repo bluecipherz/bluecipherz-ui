@@ -7,7 +7,7 @@
  * # feedFactory
  * Factory in the alFjrApp.
  */
- angular.module('alFjrApp')
+ angular.module('BlueUI')
  .factory('feedFactory', feedFactory);
 
  function feedFactory(TokenHandler, $resource, loginService) {
@@ -23,17 +23,17 @@
     var Feed = TokenHandler.wrapActions(
         $resource(loginService.host + '/feeds'),
         ['query']
-    ); 
+    );
 
-    vm.fetching = false; 
+    vm.fetching = false;
 
     function getFetchedFeeds(callBack){
         if(!feedIsFetch){
             Feed.query(params).$promise.then(function(results) {
                 feeds = results;
                 callBack(results);
-                vm.fetching = false; 
-            });  
+                vm.fetching = false;
+            });
             feedIsFetch = true;
         }else{
             callBack(feeds);
@@ -41,22 +41,22 @@
       return feeds;
     }
 
-    function GetFeeds(callBack){ 
+    function GetFeeds(callBack){
         vm.fetching = true;
         Feed.query(params).$promise.then(function(results) {
             callBack(results);
-            vm.fetching = false; 
-        });  
-     } 
+            vm.fetching = false;
+        });
+     }
 
     function RemoveFeed(input,callBack){
         var Report = TokenHandler.wrapActions(
             $resource(loginService.host + '/feeds'),
             { 'delete':   {method:'DELETE'}, isArray:false}
-        );  
+        );
         Report.delete({id:input}).$promise.then(function(results) {
             callBack(results);
-        }); 
+        });
     }
 
     return {

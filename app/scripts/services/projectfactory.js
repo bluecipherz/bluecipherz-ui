@@ -7,7 +7,7 @@
  * # projectFactory
  * Factory in the alFjrApp.
  */
- angular.module('alFjrApp')
+ angular.module('BlueUI')
  .factory('projectFactory', projectFactory);
 
  function projectFactory(TokenHandler, $resource, loginService) {
@@ -21,16 +21,16 @@
     var Projects = TokenHandler.wrapActions(
         $resource(loginService.host + '/projects'),
         ['query']
-    );  
-    
-    vm.fetching = false; 
+    );
 
-     function GetProjects(callBack){ 
+    vm.fetching = false;
+
+     function GetProjects(callBack){
         vm.fetching = true;
         Projects.query(params).$promise.then(function(results) {
             callBack(results);
-            vm.fetching = false; 
-        });  
+            vm.fetching = false;
+        });
      }
 
     return {
