@@ -15,26 +15,102 @@
       padding:30px;
       width: 100%;
       height: 100%;
-      background: #b78902;
+      background: $widget_cb  ;
     }
   }
 
 
   // Current Balance
   .rmw_currentBal{
+
+
     .rm_widget_cont{
-      padding:30px;
+      padding:10px;
+
+      .rmcb_refresh{
+        width:12px;
+        height: 12px;
+        @include border-radius(100px);
+        background: #17dcff;
+        color:rgba(255,255,255,0.7);
+        border:3px solid #fcfffa;
+        margin:10px 8px 25px 0px;
+        float: right;
+      }
+          .rmcb_refresh:hover{
+            cursor: pointer;
+          }
+
+
       .rmcb_head{
         width: 100%;
         color:rgba(255,255,255,0.7);
         margin-bottom: 20px;
+        margin-left: 15%;
       }
       .rncb_amount{
         width: 100%;
         font-size: 320%;
         color:rgba(255,255,255,1);
+        margin-left: 15%;
       }
     }
+
+  }
+  .rmw_logs{
+    width: 33.3333%;
+    padding: 5px;
+    height: 200px;
+    .rmw_log_cont{
+      @include border-radius(3px);
+      padding:10px;
+      width: 100%;
+      height: 100%;
+      background: $widget_log  ;
+
+      .rmwl_refresh{
+        width:12px;
+        height: 12px;
+        @include border-radius(100px);
+        background: #17dcff;
+        color:rgba(255,255,255,0.7);
+        border:3px solid #fcfffa;
+        margin:10px 8px 25px 0px;
+        float: right;
+      }
+      .rmwl_refresh:hover{
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  .rmw_graph{
+    width: 33.3333%;
+    padding: 5px;
+    height: 200px;
+    .rmw_graph_cont{
+      @include border-radius(3px);
+      padding:10px;
+      width: 100%;
+      height: 100%;
+      background: $widget_graph  ;
+
+      .rmwg_refresh{
+        width:12px;
+        height: 12px;
+        @include border-radius(100px);
+        background: #17dcff;
+        color:rgba(255,255,255,0.7);
+        border:3px solid #fcfffa;
+        margin:10px 8px 25px 0px;
+        float: right;
+      }
+      .rmwg_refresh:hover{
+        cursor: pointer;
+      }
+    }
+
   }
 
   // widget width setting

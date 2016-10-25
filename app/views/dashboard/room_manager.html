@@ -1,8 +1,22 @@
 <div class="Dbpage db_rm">
   <div class="rm_widget -w-1 rmw_currentBal">
     <div class="rm_widget_cont">
+
+      <div class="rmcb_refresh" ></div>
       <div class="rmcb_head">Current Balance</div>
-      <div class="rncb_amount">{{vm.walletObject.wallet.amount}}</div>
+      <div class="rncb_amount">$ {{vm.walletObject.wallet.amount}}</div>
+    </div>
+  </div>
+  <div class="rm_widget -w-3 rmw_logs">
+    <div class="rmw_log_cont">
+      <div class="rmwl_refresh" ></div>
+      <div class="rmwl_head">Logs</div>
+    </div>
+  </div>
+  <div class="rm_widget -w-2 rmw_graph">
+    <div class="rmw_graph_cont">
+      <div class="rmwg_refresh" ></div>
+      <div class="rmwg_head">Graph</div>
     </div>
   </div>
 </div>
