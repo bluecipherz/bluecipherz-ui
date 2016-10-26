@@ -1,22 +1,37 @@
 <div class="Dbpage db_rm">
   <div class="rm_widget -w-1 rmw_currentBal">
+
+    <div class="rmcb_refresh" ></div>
     <div class="rm_widget_cont">
 
-      <div class="rmcb_refresh" ></div>
       <div class="rmcb_head">Current Balance</div>
       <div class="rncb_amount">$ {{vm.walletObject.wallet.amount}}</div>
     </div>
   </div>
   <div class="rm_widget -w-3 rmw_logs">
+    <div class="rmcb_refresh" id="rmcb_update" ></div>
     <div class="rmw_log_cont">
-      <div class="rmwl_refresh" ></div>
-      <div class="rmwl_head">Logs</div>
+      <div class="rmwl_head">
+        <div class="rmwl_head_text"> Insert amount</div>
+        <!--<span class="rmwl_rs_icon fa fa-rupee"></span>-->
+        <input type="number" class="rmwl_amt_ins" ng-model="amount">
+      </div>
+      <div class="rmwl_desc">
+          <div class="rmwl_head_text"> Description</div>
+        <input type="text" class="rmwl_amt_ins rmwl_amt_ins2" ng-model="desc" ng-name="desc">
+      </div>
+      <!--<div class="rmwl_insbox">-->
+
+
+      <!--</div>-->
     </div>
   </div>
-  <div class="rm_widget -w-2 rmw_graph">
+  <div class="rm_widget -w-6 rmw_graph">
+    <div class="rmcb_refresh" ></div>
     <div class="rmw_graph_cont">
-      <div class="rmwg_refresh" ></div>
-      <div class="rmwg_head">Graph</div>
+      <div class="rmwg_head"></div>
     </div>
   </div>
 </div>
+
+

@@ -33,6 +33,24 @@
     <!-- Add your site or application content here -->
     <div class="viewPort" ng-class="{'z-down':z_down}" ui-view></div>
     <!-- NG VIEW -->
+    <div class="rightPanel">
+      <div class="rp_btn_box">
+        <div class="rpbb_btns fa fa-bell"></div>
+        <div class="rpbb_btns fa fa-user"></div>
+        <div class="rpbb_btns fa fa-edit"></div>
+      </div>
+      <div class="rp_logs" ng-controller="notifyctrl">
+        <div class="rpl_log" ng-repeat="logdata in notifydata">
+          <div class="rpl_log_user" >
+            {{logdata.user}}
+            <div class="rpl_close fa fa-close"></div>
+          </div>
+          <div class="rpl_log_desc" >{{logdata.desc + " : " + logdata.amount}}
+            <div class="rpl_log_verify" ><form><label class="rpl_label"> verify <input  class="rplv_btn" type="checkbox" ng-checked="false" ng-model=""></label></form></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
