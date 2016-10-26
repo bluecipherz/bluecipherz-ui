@@ -8,17 +8,17 @@
  * Controller of the alFjrApp
  */
 
-angular.module('alFjrApp')
-  .controller('WhoWeAreCtrl', function ($rootScope,$state,headerService) {  
-    var vm = this; 
+angular.module('BlueUI')
+  .controller('WhoWeAreCtrl', function ($rootScope,$state,headerService) {
+    var vm = this;
     headerService.hTopHeight = 550 ;
     headerService.setScroll();
     headerService.setPage();
 
     setPage();
-    function setPage(){ 
-      setTimeout(function(){  
-        $('.homeTop').css({opacity:1}); 
+    function setPage(){
+      setTimeout(function(){
+        $('.homeTop').css({opacity:1});
       },10);
     }
     vm.scrollArrow = function(){

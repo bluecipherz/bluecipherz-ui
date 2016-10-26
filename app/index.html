@@ -24,14 +24,14 @@
     <!-- <link rel="stylesheet" href="styles/css/font-awesome.min.css"> -->
     <!-- endbuild -->
   </head>
-  <body ng-app="alFjrApp">
+  <body ng-app="BlueUI">
     <title>{{title}}</title>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="viewPort" ng-class="{'z-down':z_down}" ui-view></div>
+    <div class="viewPort" ui-view></div>
     <!-- NG VIEW -->
     <div class="rightPanel">
       <div class="rp_btn_box">
@@ -46,23 +46,15 @@
             <div class="rpl_close fa fa-close"></div>
           </div>
           <div class="rpl_log_desc" >{{logdata.desc + " : " + logdata.amount}}
-            <div class="rpl_log_verify" ><form><label class="rpl_label"> verify <input  class="rplv_btn" type="checkbox" ng-checked="false" ng-model=""></label></form></div>
+            <div class="rpl_log_verify" >
+              <form>
+                <label class="rpl_label"> verify <input  class="rplv_btn" type="checkbox" ng-checked="false" ></label>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       // !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       // (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       // r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       // }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-       // ga('create', 'UA-XXXXX-X');
-       // ga('send', 'pageview');
-    </script>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- <script src="bower_components/jquery/dist/scrollspeed.js"></script> -->
@@ -104,6 +96,7 @@
         <script src="scripts/controllers/dashboard/projectManager.js"></script>
         <script src="scripts/controllers/dashboard/room_manager.js"></script>
         <script src="scripts/services/roomManagerService.js"></script>
+        <script src="scripts/services/notificationService.js"></script>
         <!-- endbuild -->
 </body>
 </html>

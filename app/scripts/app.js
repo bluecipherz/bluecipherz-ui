@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('alFjrApp', [
+  .module('BlueUI', [
     'ngResource',
     'ui.router',
     'ngCookies',

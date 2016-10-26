@@ -8,26 +8,26 @@
  * Controller of the alFjrApp
  */
 
-angular.module('alFjrApp')
-  .controller('MainCtrl', function ($rootScope,$state,headerService,$scope) {  
+angular.module('BlueUI')
+  .controller('MainCtrl', function ($rootScope,$state,headerService,$scope) {
     var vm = this;
     var winHeight = $(window).height();
 
-    var vm = this; 
+    var vm = this;
     var hTopHeight = 550;
     headerService.hTopHeight = hTopHeight ;
     headerService.setScroll();
     headerService.setPage();
 
     setPage();
-    function setPage(){ 
+    function setPage(){
       var ph = winHeight - hTopHeight;
       $('.hm2_head').css({'line-height':ph+'px'});
       headerService.setPage();
-      setTimeout(function(){  
-        $('.homeTop').css({opacity:1}); 
+      setTimeout(function(){
+        $('.homeTop').css({opacity:1});
       },10);
-      setTimeout(function(){  
+      setTimeout(function(){
         vm.hmTab = 1;
         $scope.$apply();
       },500);
@@ -35,12 +35,12 @@ angular.module('alFjrApp')
 
 
 
-    $(window).scroll(function(){ 
+    $(window).scroll(function(){
       vm.y = $(window).scrollTop();
       if(vm.y > ( winHeight / 2 ) - 100){
         setHomeMid();
-      } 
-    });  
+      }
+    });
 
     function setAnimB(left){
       $('.animB').css({left:left})
@@ -62,13 +62,13 @@ angular.module('alFjrApp')
 
 
     function setHomeMid(){
-      $('.homeGraph').css({opacity:1}); 
+      $('.homeGraph').css({opacity:1});
     }
 
 
 
   })
-  .controller('NavCtrl', function ($rootScope,$state,headerService) {  
+  .controller('NavCtrl', function ($rootScope,$state,headerService) {
     var vm = this;
     vm.state = $state;
     vm.btnClick = function(to){
@@ -96,7 +96,7 @@ angular.module('alFjrApp')
           },time);
     }
   })
-  .controller('SideCtrl', function ($rootScope,$state,headerService) {  
+  .controller('SideCtrl', function ($rootScope,$state,headerService) {
     var vm = this;
     vm.tab = 1;
     vm.state = $state;

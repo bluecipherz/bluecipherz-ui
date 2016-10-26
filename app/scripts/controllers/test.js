@@ -8,8 +8,8 @@
  * Controller of the alFjrApp
  */
 
-angular.module('alFjrApp')
-  .controller('testCtrl', function ($rootScope,$state,headerService) {  
+angular.module('BlueUI')
+  .controller('testCtrl', function ($rootScope,$state,headerService) {
     var vm = this;
     headerService.setPage();
 
