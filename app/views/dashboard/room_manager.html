@@ -26,12 +26,23 @@
       <!--</div>-->
     </div>
   </div>
-  <div class="rm_widget -w-6 rmw_graph">
+  <div class="rm_widget -w-2 rmw_graph">
     <div class="rmcb_refresh" ></div>
     <div class="rmw_graph_cont">
       <div class="rmwg_head"></div>
     </div>
   </div>
+
+  <div class="rm_widget -w-6 rmw_report" ng-controller="ReportCtrl as vm">
+    <div class="rmcb_refresh " ng-class="{'animate':vm.refreshing}" ng-click="vm.refresh()" ></div>
+    <div class="rmw_report_cont">
+      <div class="rmwr_cont_head">
+        <h1>Reports</h1>
+      </div>
+    </div>
+  </div>
+
+
 </div>
 
 

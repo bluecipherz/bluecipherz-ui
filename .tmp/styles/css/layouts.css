@@ -3444,12 +3444,35 @@ rzslider {
     top: 0px;
     left: 0px;
     z-index: 100px; }
-  .db_rm .rmcb_refresh:hover {
+  .db_rm .rmcb_refresh.animate {
     -webkit-animation: pulsate 0.7s ease-out;
             animation: pulsate 0.7s ease-out;
-    -webkit-animation-iteration-count: 3;
-            animation-iteration-count: 3;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  .db_rm .rmcb_refresh:hover {
     cursor: pointer; }
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0.0; }
+  50% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0; } }
+@keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0.0; }
+  50% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0; } }
   .db_rm .rmw_currentBal {
     position: relative; }
     .db_rm .rmw_currentBal .rm_widget_cont {
@@ -3521,6 +3544,26 @@ rzslider {
       .db_rm .rmw_graph .rmw_graph_cont .rmwg_head {
         color: rgba(255, 255, 255, 0.7);
         margin: 6% 0px 0px 1%; }
+  .db_rm .rmw_report {
+    padding: 5px;
+    height: 400px;
+    position: relative; }
+    .db_rm .rmw_report .rmcb_refresh {
+      border: 3px solid rgba(23, 220, 255, 0.9); }
+    .db_rm .rmw_report .rmcb_refresh .animate {
+      -webkit-animation: pulsate 0.7s ease-out;
+              animation: pulsate 0.7s ease-out;
+      -webkit-animation-iteration-count: 3;
+              animation-iteration-count: 3; }
+    .db_rm .rmw_report .rmw_report_cont {
+      border-radius: 3px;
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      background: #e2e4e0; }
+      .db_rm .rmw_report .rmw_report_cont .rmwr_cont_head {
+        color: rgba(0, 0, 0, 0.7);
+        margin: 20px; }
   .db_rm .rm_widget.-w-1 {
     width: 16.6666%; }
   .db_rm .rm_widget.-w-2 {
@@ -3533,29 +3576,5 @@ rzslider {
     width: 83.3333%; }
   .db_rm .rm_widget.-w-6 {
     width: 100%; }
-  .db_rm .rm_widget.-w-6 {
+  .db_rm .rm_widget.-w-7 {
     width: 28%; }
-
-@-webkit-keyframes pulsate {
-  0% {
-    -webkit-transform: scale(0.1);
-            transform: scale(0.1);
-    opacity: 0.0; }
-  50% {
-    opacity: 1; }
-  100% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    opacity: 0; } }
-
-@keyframes pulsate {
-  0% {
-    -webkit-transform: scale(0.1);
-            transform: scale(0.1);
-    opacity: 0.0; }
-  50% {
-    opacity: 1; }
-  100% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    opacity: 0; } }

@@ -31,7 +31,29 @@ angular.module('BlueUI')
 
     ]
     // $scope.employees = arremployees;
+  })
+
+  .controller('ReportCtrl',function ($scope, $timeout) {
+    var vm = this;
+    vm.refreshing = false;
+    vm.refresh = function() {
+      if(!vm.refreshing){
+        vm.refreshing = true;
+
+        // do ome code to refresh data
+
+        $timeout(function () {
+          vm.refreshing = false;
+        },3000);
+
+      }
+    };
+
   });
+
+
+
+
 
 /*
   Different categories of notification cat
